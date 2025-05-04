@@ -4,7 +4,7 @@ draft: true
 title: '2022 12 17 Electrical Embers and Melted Plastic'
 ---
 
-![Beetle After the Fire](/logs/2022-12-17-electrical-embers-and-melted-plastic/images/beetle-after-fire.jpg)
+{{< figure src="/logs/2022-12-17-electrical-embers-and-melted-plastic/images/beetle-after-fire.jpg" width="800" alt="Beetle After the Fire" >}}
 
 It was supposed to be another ordinary day in the shop, but things took an unexpected turn. As I was working on the Beetle, I noticed a strange smell in the air—something burning. A quick investigation revealed an electrical fire had started near the car. The culprit? An old ceiling fan that was poorly wired and connected to the same circuit as the car’s nearby workspace.
 

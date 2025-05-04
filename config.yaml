@@ -6,6 +6,7 @@ relativeURLs: true
 canonifyURLs: false
 
 params:
+  optimizeImages: true
   ShowReadingTime: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
