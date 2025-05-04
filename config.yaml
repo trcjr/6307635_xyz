@@ -1,0 +1,29 @@
+baseURL: "https://6307635.xyz/"
+languageCode: "en-us"
+title: "VW Beetle Restomod"
+theme: "PaperMod"
+
+params:
+  ShowReadingTime: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowShareButtons: true
+  defaultTheme: auto
+  displayFullLangName: true
+
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 1
+
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 2
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

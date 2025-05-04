@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>VW Beetle Restomod</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on VW Beetle Restomod</description>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 03 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About This Beetle</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sat, 03 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p align=&#34;center&#34;&gt;
+  
+  
+  
+  
+  
+  &lt;img src=&#34;http://localhost:1313/images/beetle-on-trailer_hu_f2bb2c043db0f2c.jpg&#34; alt=&#34;My 1964 Beetle&#34; width=&#34;800&#34;&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This 1964 Volkswagen Beetle is undergoing a full restomod, including a modern EFI conversion using Speeduino. Originally a 6V system, it&amp;rsquo;s been upgraded to 12V and fitted with a 1600cc dual-port engine.&lt;/p&gt;
+&lt;h3 id=&#34;factory-details&#34;&gt;Factory Details&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;VIN&lt;/strong&gt;: 6 307 635&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Model&lt;/strong&gt;: Type 113 – Export Model (Left Hand Drive)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Original Color&lt;/strong&gt;: Sea Blue&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Production Date&lt;/strong&gt;: 24 April 1964&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Delivered to&lt;/strong&gt;: USA on 28 April 1964&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;quick-specs&#34;&gt;Quick Specs&lt;/h3&gt;
+&lt;dl&gt;
+  &lt;dt&gt;&lt;strong&gt;Year&lt;/strong&gt;&lt;/dt&gt;
+  &lt;dd&gt;1964&lt;/dd&gt;
+  &lt;dt&gt;&lt;strong&gt;Engine&lt;/strong&gt;&lt;/dt&gt;
+  &lt;dd&gt;1600cc dual-port (AK0453889)&lt;/dd&gt;
+  &lt;dt&gt;&lt;strong&gt;Electrical&lt;/strong&gt;&lt;/dt&gt;
+  &lt;dd&gt;Converted to 12V&lt;/dd&gt;
+  &lt;dt&gt;&lt;strong&gt;Transmission&lt;/strong&gt;&lt;/dt&gt;
+  &lt;dd&gt;4-speed manual&lt;/dd&gt;
+  &lt;dt&gt;&lt;strong&gt;Status&lt;/strong&gt;&lt;/dt&gt;
+  &lt;dd&gt;In progress&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h3 id=&#34;historical-vs-current-comparison&#34;&gt;Historical vs. Current Comparison&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Feature&lt;/th&gt;
+          &lt;th&gt;Factory (1964)&lt;/th&gt;
+          &lt;th&gt;Current Setup&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Engine&lt;/td&gt;
+          &lt;td&gt;1200cc 40HP (6V)&lt;/td&gt;
+          &lt;td&gt;1600cc dual-port (AK0453889)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Electrical&lt;/td&gt;
+          &lt;td&gt;6V&lt;/td&gt;
+          &lt;td&gt;12V conversion&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Fuel System&lt;/td&gt;
+          &lt;td&gt;Solex carburetor&lt;/td&gt;
+          &lt;td&gt;EFI – Speeduino v0.4.4b&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Ignition&lt;/td&gt;
+          &lt;td&gt;Mechanical distributor&lt;/td&gt;
+          &lt;td&gt;Electronic (TBD)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Interior&lt;/td&gt;
+          &lt;td&gt;Factory original&lt;/td&gt;
+          &lt;td&gt;TBD – hidden upgrades planned&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Color&lt;/td&gt;
+          &lt;td&gt;Sea Blue&lt;/td&gt;
+          &lt;td&gt;Sea Blue (with patina)&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;future-goals&#34;&gt;Future Goals&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Tuned driving reliability&lt;/li&gt;
+&lt;li&gt;Add hidden modern upgrades&lt;/li&gt;
+&lt;li&gt;Possibly swap to Subaru EJ20 in future&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>
