@@ -1,82 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Sea Blue &amp; Sketchy 🌊🔌</title><link>https://6307635.xyz/</link><description>Recent content on Sea Blue &amp; Sketchy 🌊🔌</description><generator>Hugo -- 0.147.0</generator><language>en-us</language><lastBuildDate>Sat, 03 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://6307635.xyz/index.xml" rel="self" type="application/rss+xml"/><item><title>About This Beetle</title><link>https://6307635.xyz/about/</link><pubDate>Sat, 03 May 2025 00:00:00 +0000</pubDate><guid>https://6307635.xyz/about/</guid><description>&lt;p align="center">
-&lt;img
-src="https://6307635.xyz/images/beetle-on-trailer_hu_f2bb2c043db0f2c.jpg"
-srcset="https://6307635.xyz/images/beetle-on-trailer_hu_f2bb2c043db0f2c.jpg 800w"
-alt="My 1964 Beetle"
-width="800"
-loading="lazy"
-decoding="async"
-style="max-width: 100%; height: auto;"
->
-&lt;/p>
-&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>This 1964 Volkswagen Beetle is undergoing a full restomod, including a modern EFI conversion using Speeduino. Originally a 6V system, it&amp;rsquo;s been upgraded to 12V and fitted with a 1600cc dual-port engine.&lt;/p>
-&lt;h3 id="factory-details">Factory Details&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>VIN&lt;/strong>: 6 307 635&lt;/li>
-&lt;li>&lt;strong>Model&lt;/strong>: Type 113 – Export Model (Left Hand Drive)&lt;/li>
-&lt;li>&lt;strong>Original Color&lt;/strong>: Sea Blue&lt;/li>
-&lt;li>&lt;strong>Production Date&lt;/strong>: 24 April 1964&lt;/li>
-&lt;li>&lt;strong>Delivered to&lt;/strong>: USA on 28 April 1964&lt;/li>
-&lt;/ul>
-&lt;h3 id="quick-specs">Quick Specs&lt;/h3>
-&lt;dl>
-&lt;dt>&lt;strong>Year&lt;/strong>&lt;/dt>
-&lt;dd>1964&lt;/dd>
-&lt;dt>&lt;strong>Engine&lt;/strong>&lt;/dt>
-&lt;dd>1600cc dual-port (AK0453889)&lt;/dd>
-&lt;dt>&lt;strong>Electrical&lt;/strong>&lt;/dt>
-&lt;dd>Converted to 12V&lt;/dd>
-&lt;dt>&lt;strong>Transmission&lt;/strong>&lt;/dt>
-&lt;dd>4-speed manual&lt;/dd>
-&lt;dt>&lt;strong>Status&lt;/strong>&lt;/dt>
-&lt;dd>In progress&lt;/dd>
-&lt;/dl>
-&lt;h3 id="historical-vs-current-comparison">Historical vs. Current Comparison&lt;/h3>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Feature&lt;/th>
-&lt;th>Factory (1964)&lt;/th>
-&lt;th>Current Setup&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>Engine&lt;/td>
-&lt;td>1200cc 40HP (6V)&lt;/td>
-&lt;td>1600cc dual-port (AK0453889)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Electrical&lt;/td>
-&lt;td>6V&lt;/td>
-&lt;td>12V conversion&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Fuel System&lt;/td>
-&lt;td>Solex carburetor&lt;/td>
-&lt;td>EFI – Speeduino v0.4.4b&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Ignition&lt;/td>
-&lt;td>Mechanical distributor&lt;/td>
-&lt;td>Electronic (TBD)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Interior&lt;/td>
-&lt;td>Factory original&lt;/td>
-&lt;td>TBD – hidden upgrades planned&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Color&lt;/td>
-&lt;td>Sea Blue&lt;/td>
-&lt;td>Sea Blue (with patina)&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h3 id="future-goals">Future Goals&lt;/h3>
-&lt;ul>
-&lt;li>Tuned driving reliability&lt;/li>
-&lt;li>Add hidden modern upgrades&lt;/li>
-&lt;li>Possibly swap to Subaru EJ20 in future&lt;/li>
-&lt;/ul></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>1964 VW Beetle Build Log on 6307635 - Sea Blue &amp; Sketchy 🌊🔌</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content in 1964 VW Beetle Build Log on 6307635 - Sea Blue &amp; Sketchy 🌊🔌</description>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 May 2025 12:15:11 -0400</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2022 12 17 Electrical Embers and Melted Plastic</title>
+      <link>//localhost:1313/logs/2022-12-17-electrical-embers-and-melted-plastic/</link>
+      <pubDate>Sun, 04 May 2025 12:15:11 -0400</pubDate>
+      <guid>//localhost:1313/logs/2022-12-17-electrical-embers-and-melted-plastic/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Beetle After the Fire&#34; loading=&#34;lazy&#34; src=&#34;./logs/2022-12-17-electrical-embers-and-melted-plastic/images/beetle-after-fire.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;It was supposed to be another ordinary day in the shop, but things took an unexpected turn. As I was working on the Beetle, I noticed a strange smell in the air—something burning. A quick investigation revealed an electrical fire had started near the car. The culprit? An old ceiling fan that was poorly wired and connected to the same circuit as the car’s nearby workspace.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
