@@ -1,6 +1,6 @@
 baseURL: "https://6307635.xyz/"
 languageCode: "en-us"
-title: "VW Beetle Restomod"
+title: "Sea Blue & Sketchy 🌊🔌"
 theme: "PaperMod"
 
 params:
@@ -10,6 +10,7 @@ params:
   ShowShareButtons: true
   defaultTheme: auto
   displayFullLangName: true
+  description: "Period-correct paint. Period-incorrect everything else."
 
 menu:
   main:

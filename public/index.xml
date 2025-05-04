@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>VW Beetle Restomod</title>
+    <title>Sea Blue &amp; Sketchy 🌊🔌</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on VW Beetle Restomod</description>
+    <description>Recent content on Sea Blue &amp; Sketchy 🌊🔌</description>
     <generator>Hugo -- 0.147.0</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 03 May 2025 00:00:00 +0000</lastBuildDate>
@@ -19,7 +19,20 @@
   
   
   
-  &lt;img src=&#34;http://localhost:1313/images/beetle-on-trailer_hu_f2bb2c043db0f2c.jpg&#34; alt=&#34;My 1964 Beetle&#34; width=&#34;800&#34;&gt;
+  
+  
+    
+  
+    &lt;img
+      src=&#34;http://localhost:1313/images/beetle-on-trailer_hu_f2bb2c043db0f2c.jpg&#34;
+      srcset=&#34;http://localhost:1313/images/beetle-on-trailer_hu_f2bb2c043db0f2c.jpg 800w&#34;
+      alt=&#34;My 1964 Beetle&#34;
+      width=&#34;800&#34;
+      loading=&#34;lazy&#34;
+      decoding=&#34;async&#34;
+      style=&#34;max-width: 100%; height: auto;&#34;
+    &gt;
+
 &lt;/p&gt;
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;This 1964 Volkswagen Beetle is undergoing a full restomod, including a modern EFI conversion using Speeduino. Originally a 6V system, it&amp;rsquo;s been upgraded to 12V and fitted with a 1600cc dual-port engine.&lt;/p&gt;

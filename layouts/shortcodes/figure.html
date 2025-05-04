@@ -1,6 +1,19 @@
 {{ $src := .Get "src" }}
 {{ $alt := .Get "alt" | default "" }}
 {{ $width := .Get "width" | default "800" }}
-{{ $image := resources.Get (printf "images/%s" $src) }}
-{{ $resized := $image.Resize (printf "%sx" $width) }}
-<img src="{{ $resized.RelPermalink }}" alt="{{ $alt }}" width="{{ $width }}">
+{{ $path := printf "images/%s" $src }}
+{{ $image := resources.Get $path }}
+
+{{ with $image }}
+  {{ $resized := .Resize (printf "%sx" $width) }}
+
+  <img
+    src="{{ $resized.RelPermalink }}"
+    srcset="{{ $resized.RelPermalink }} {{ $width }}w"
+    alt="{{ $alt }}"
+    width="{{ $width }}"
+    loading="lazy"
+    decoding="async"
+    style="max-width: 100%; height: auto;"
+  >
+{{ end }}

@@ -5,7 +5,7 @@ draft: false
 ---
 
 <p align="center">
-  {{< figure src="beetle-on-trailer.jpg" alt="My 1964 Beetle" width="800" >}}
+  {{< figure src="beetle-on-trailer.jpg" alt="My 1964 Beetle" width="800" loading="lazy">}}
 </p>
 
 ## Overview
