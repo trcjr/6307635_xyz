@@ -2,11 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Logs on 6307635 - Sea Blue &amp; Sketchy 🌊🔌</title>
-    <link>/logs/</link>
+    <link>//localhost:1313/logs/</link>
     <description>Recent content in Logs on 6307635 - Sea Blue &amp; Sketchy 🌊🔌</description>
     <generator>Hugo -- 0.147.0</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="/logs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 May 2025 12:15:11 -0400</lastBuildDate>
+    <atom:link href="//localhost:1313/logs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2022 12 17 Electrical Embers and Melted Plastic</title>
+      <link>//localhost:1313/logs/2022-12-17-electrical-embers-and-melted-plastic/</link>
+      <pubDate>Sun, 04 May 2025 12:15:11 -0400</pubDate>
+      <guid>//localhost:1313/logs/2022-12-17-electrical-embers-and-melted-plastic/</guid>
+      <description>&lt;p&gt;{{ $image := resources.Get &amp;ldquo;/logs/2022-12-17-electrical-embers-and-melted-plastic/images/beetle-after-fire.jpg&amp;rdquo; | resources.ImageFilter &amp;ldquo;quality=80&amp;rdquo; }}
+{{ $image.Resize &amp;ldquo;800x&amp;rdquo; }}
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;%7b%7b%20$image.RelPermalink%20%7d%7d&#34;
+         alt=&#34;Beetle After the Fire&#34;/&gt; 
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;../logs/2022-12-17-electrical-embers-and-melted-plastic/images/beetle-after-fire.jpg&#34;
+         alt=&#34;Beetle After the Fire&#34; width=&#34;800&#34;/&gt; 
+&lt;/figure&gt;
+
+&lt;p&gt;It was supposed to be another ordinary day in the shop, but things took an unexpected turn. As I was working on the Beetle, I noticed a strange smell in the air—something burning. A quick investigation revealed an electrical fire had started near the car. The culprit? An old ceiling fan that was poorly wired and connected to the same circuit as the car’s nearby workspace.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
