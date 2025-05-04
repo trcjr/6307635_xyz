@@ -1,7 +1,9 @@
-baseURL: "https://6307635.xyz/"
+baseURL: "/"
 languageCode: "en-us"
 title: "Sea Blue & Sketchy 🌊🔌"
 theme: "PaperMod"
+relativeURLs: true
+canonifyURLs: false
 
 params:
   ShowReadingTime: true

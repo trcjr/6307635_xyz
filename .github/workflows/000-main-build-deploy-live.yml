@@ -1,0 +1,43 @@
+name: Build and Deploy Hugo Site from Main Branch
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest"
+
+      - name: Build Hugo site
+        run: |
+          hugo --minify --baseURL "https://6307635.xyz/"
+          echo "https://6307635.xyz/" > public/DEPLOYED_URL.txt
+
+      - name: Set CNAME file
+        run: echo "6307635.xyz" > public/CNAME
+
+      - name: Output live URL
+        run: |
+          echo "🔗 Your site is live at: https://6307635.xyz/"
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.GH_PAGES_DEPLOY_KEY }}
+          publish_dir: ./public
+          publish_branch: gh-pages
+          force_orphan: true
+          user_name: "GitHub Actions"
+          user_email: "actions@github.com"
+          commit_message: "Deploy from main: ${{ github.sha }}"
