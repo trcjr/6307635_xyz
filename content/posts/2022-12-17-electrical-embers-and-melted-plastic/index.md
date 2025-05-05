@@ -1,6 +1,6 @@
 ---
 date: '2025-05-04T12:15:11-04:00'
-draft: true
+draft: false
 title: '2022 12 17 Electrical Embers and Melted Plastic'
 ---
 
@@ -20,8 +20,6 @@ Ok so here is a picture of the car after a fire happened or whatever
 | {{< resize-img src="beetle-after-fire.jpg" alt="Beetle After Fire" width="80%" >}} Aftermath of the incident ALT TEXT {{< /resize-img >}} | 80% | |
 | {{< resize-img src="beetle-after-fire.jpg" alt="Beetle After Fire" width="8%" >}} Aftermath of the incident ALT TEXT {{< /resize-img >}} | 8% | |
 | fake img | fake alt | notes |
-
-
 
 It was supposed to be another ordinary day in the shop, but things took an unexpected turn. As I was working on the Beetle, I noticed a strange smell in the air—something burning. A quick investigation revealed an electrical fire had started near the car. The culprit? An old ceiling fan that was poorly wired and connected to the same circuit as the car’s nearby workspace.
 

@@ -10,7 +10,7 @@ params:
   ShowReadingTime: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
-  ShowShareButtons: true
+  ShowShareButtons: false
   defaultTheme: auto
   displayFullLangName: true
   description: "Period-correct paint. Period-incorrect everything else."

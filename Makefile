@@ -11,26 +11,32 @@ preflight: build install-htmltest check-exif link-check check-warnings check-dra
 	  echo "❌ public/ directory is missing!"; \
 	  exit 1; \
 	fi
-	@echo "✅ Preflight checklist complete. Ready for takeoff!"
+	@echo "✅ Preflight checklist complete. Ready for takeoff! ✈️"
 
 ci: preflight ## 🤖 Run all checks like CI
+	@echo "✅ CI tasks completed."
 
 test: check-exif link-check check-warnings check-drafts check-metadata ## 🧪 Run local non-lint tests
 	@echo "✅ Basic tests complete."
 
 check-metadata: ## 📝 Validate frontmatter metadata
 	bash scripts/check-metadata.sh
+	@echo "✅ Metadata check complete."
 
 check-slugs-unique: ## 🔗 Ensure no slug collisions
 	bash scripts/check-slugs-unique.sh
+	@echo "✅ Slug uniqueness check complete."
 
 check-exif: ## 🕵️ Detect EXIF metadata in images
 	bash scripts/check-exif.sh
+	@echo "✅ EXIF check complete."
 
 strip-exif: ## 🧼 Remove EXIF metadata from all images
 	STRIP=1 $(MAKE) check-exif
+	@echo "✅ EXIF metadata removed."
 
 strip: strip-exif ## 🧼 Alias for strip-exif
+	@echo "✅ EXIF stripping complete."
 
 link-check: ## 🔗 Validate links with htmltest
 	@if [ ! -x ./bin/htmltest ]; then \
@@ -38,52 +44,59 @@ link-check: ## 🔗 Validate links with htmltest
 	  $(MAKE) install-htmltest; \
 	fi
 	@./bin/htmltest || (echo "❌ Link check failed!" && exit 1)
+	@echo "✅ Link check complete."
 
 check-warnings: ## ⚠️ Fail on Hugo build warnings
 	@! hugo --minify 2>&1 | tee /tmp/hugo-build.log | grep -v 'schema_json' | grep -q "^WARN" && echo "✅ No critical Hugo warnings found." || (echo "❌ Hugo warnings detected:" && grep "^WARN" /tmp/hugo-build.log && exit 1)
+	@echo "✅ Hugo warnings check complete."
 
 check-drafts: ## 🚫 Check for drafts in repo
 	@git grep -q 'draft: *true' content && (echo "❌ Draft content detected in repo" && git grep 'draft: *true' content && exit 1) || echo "✅ No draft content committed."
+	@echo "✅ Draft check complete."
 
 lint-inclusive-language: ## 🌍 Lint for inclusive language
 	@docker run --rm -v $$(pwd):/src -w /src getwoke/woke woke --exit-1-on-failure || echo "⚠️ Inclusive language check completed"
+	@echo "✅ Inclusive language linting complete."
 
 install-htmltest: ## 🛠️ Install htmltest locally
 	@mkdir -p ./bin
-	@set -e; \
-	echo "🔍 Starting htmltest installation..."; \
-	VERSION=0.17.0; \
-	OS_RAW=$$(uname -s); \
-	ARCH_RAW=$$(uname -m); \
-	echo "🔧 Raw OS: $$OS_RAW"; \
-	echo "🔧 Raw ARCH: $$ARCH_RAW"; \
-	OS=$$(echo "$$OS_RAW" | tr '[:upper:]' '[:lower:]'); \
-	case "$$OS" in \
-		darwin) OS_NAME=macos ;; \
-		linux) OS_NAME=linux ;; \
-		*) echo "❌ Unsupported OS: $$OS_RAW" && exit 1 ;; \
-	esac; \
-	case "$$ARCH_RAW" in \
-		x86_64) ARCH_NAME=amd64 ;; \
-		arm64|aarch64) ARCH_NAME=arm64 ;; \
-		*) echo "❌ Unsupported architecture: $$ARCH_RAW" && exit 1 ;; \
-	esac; \
-	echo "✅ Normalized OS: $$OS_NAME"; \
-	echo "✅ Normalized ARCH: $$ARCH_NAME"; \
-	ARCHIVE="htmltest_$${VERSION}_$${OS_NAME}_$${ARCH_NAME}.tar.gz"; \
-	URL="https://github.com/wjdp/htmltest/releases/download/v$${VERSION}/$${ARCHIVE}"; \
-	echo "📦 Downloading: $$URL"; \
-	curl -sSL -o ./bin/htmltest.tar.gz "$$URL" || (echo "❌ Download failed!" && exit 1); \
-	echo "📁 File type of downloaded archive:"; \
-	file ./bin/htmltest.tar.gz || true; \
-	echo "📂 Listing contents of ./bin:"; \
-	ls -alh ./bin; \
-	echo "📦 Attempting to extract archive..."; \
-	tar -tzf ./bin/htmltest.tar.gz || (echo "❌ Archive is invalid or corrupted!" && exit 1); \
-	tar -xzf ./bin/htmltest.tar.gz -C ./bin || (echo "❌ Extraction failed!" && exit 1); \
-	chmod +x ./bin/htmltest || echo "⚠️ Couldn't set executable permission"; \
-	rm ./bin/htmltest.tar.gz; \
-	echo "✅ htmltest $$VERSION installed to ./bin/htmltest"
+	@if [ ! -f ./bin/htmltest ]; then \
+		echo "🔍 Starting htmltest installation..."; \
+		VERSION=0.17.0; \
+		OS_RAW=$$(uname -s); \
+		ARCH_RAW=$$(uname -m); \
+		echo "🔧 Raw OS: $$OS_RAW"; \
+		echo "🔧 Raw ARCH: $$ARCH_RAW"; \
+		OS=$$(echo "$$OS_RAW" | tr '[:upper:]' '[:lower:]'); \
+		case "$$OS" in \
+			darwin) OS_NAME=macos ;; \
+			linux) OS_NAME=linux ;; \
+			*) echo "❌ Unsupported OS: $$OS_RAW" && exit 1 ;; \
+		esac; \
+		case "$$ARCH_RAW" in \
+			x86_64) ARCH_NAME=amd64 ;; \
+			arm64|aarch64) ARCH_NAME=arm64 ;; \
+			*) echo "❌ Unsupported architecture: $$ARCH_RAW" && exit 1 ;; \
+		esac; \
+		echo "✅ Normalized OS: $$OS_NAME"; \
+		echo "✅ Normalized ARCH: $$ARCH_NAME"; \
+		ARCHIVE="htmltest_$${VERSION}_$${OS_NAME}_$${ARCH_NAME}.tar.gz"; \
+		URL="https://github.com/wjdp/htmltest/releases/download/v$${VERSION}/$${ARCHIVE}"; \
+		echo "📦 Downloading: $$URL"; \
+		curl -sSL -o ./bin/htmltest.tar.gz "$$URL" || (echo "❌ Download failed!" && exit 1); \
+		echo "📁 File type of downloaded archive:"; \
+		file ./bin/htmltest.tar.gz || true; \
+		echo "📂 Listing contents of ./bin:"; \
+		ls -alh ./bin; \
+		echo "📦 Attempting to extract archive..."; \
+		tar -tzf ./bin/htmltest.tar.gz || (echo "❌ Archive is invalid or corrupted!" && exit 1); \
+		tar -xzf ./bin/htmltest.tar.gz -C ./bin || (echo "❌ Extraction failed!" && exit 1); \
+		chmod +x ./bin/htmltest || echo "⚠️ Couldn't set executable permission"; \
+		rm ./bin/htmltest.tar.gz; \
+		echo "✅ htmltest $$VERSION installed to ./bin/htmltest"; \
+	else \
+		echo "✅ htmltest already installed."; \
+	fi
 
 ##@ 🚀 Development
 
@@ -98,22 +111,28 @@ new: ## ✏️ Create a new post with today’s date
 
 build: ## 🔨 Build the site with minification
 	hugo --minify
+	@echo "✅ Site build complete."
 
 build-develop: ## 🧪 Build the /develop preview site
 	hugo --baseURL="/develop/" --destination=public/develop --minify
+	@echo "✅ Development build complete."
 
 serve: ## 🔌 Serve the site with Hugo
 	hugo serve -D --renderToMemory
+	@echo "✅ Site is live on localhost."
 
 serve-develop: ## 👀 Preview /develop locally
 	hugo server --baseURL="http://localhost:1313/develop/" --renderToMemory -D
+	@echo "✅ Development preview live."
 
 serve-develop-static: build-develop ## 🌐 Serve /develop statically
 	@echo "📦 Serving static site from public/"
 	@python3 -m http.server 8000 --directory public
+	@echo "✅ Static site serving complete."
 
 clean: ## 🧹 Clean up generated files
 	rm -rf public/ resources/ .hugo_build.lock
+	@echo "✅ Clean up complete."
 
 
 ##@ 🧼 Formatting
