@@ -14,14 +14,14 @@ params:
   defaultTheme: auto
   displayFullLangName: true
   description: "Period-correct paint. Period-incorrect everything else."
-  mainSections: ["logs"]
+  mainSections: ["posts", "about"]
   showFeaturedPost: true
 
 menu:
   main:
-    - identifier: logs
-      name: Logs
-      url: /logs/
+    - identifier: posts
+      name: Posts
+      url: /posts/
       weight: 2
 
     - identifier: about

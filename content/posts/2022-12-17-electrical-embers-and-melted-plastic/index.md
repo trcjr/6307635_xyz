@@ -4,9 +4,24 @@ draft: true
 title: '2022 12 17 Electrical Embers and Melted Plastic'
 ---
 
-{{ $image := resources.Get "/assets/logs/2022-12-17-electrical-embers-and-melted-plastic/images/beetle-after-fire.jpg" | resources.ImageFilter "quality=80" }}
-{{ $image.Resize "800x" }}
-{{< figure src="{{ $image.RelPermalink }}" alt="Beetle After the Fire" >}}
+
+
+
+Ok so here is a picture of the car after a fire happened or whatever
+
+| image with alt text | alt text only | notes |
+| ----- | ----- | ----- |
+| {{< resize-img src="beetle-after-fire.jpg" alt="Beetle After Fire" width="10x" >}} Aftermath of the incident ALT TEXT {{< /resize-img >}} | 10x | |
+| {{< resize-img src="beetle-after-fire.jpg" alt="Beetle After Fire" width="20x" >}} Aftermath of the incident ALT TEXT {{< /resize-img >}} | 20x | |
+| {{< resize-img src="beetle-after-fire.jpg" alt="Beetle After Fire" width="200x" >}} Aftermath of the incident ALT TEXT {{< /resize-img >}} | 200x | |
+| {{< resize-img src="beetle-after-fire.jpg" alt="Beetle After Fire" width="400x" >}} Aftermath of the incident ALT TEXT {{< /resize-img >}} | 400x | |
+| {{< resize-img src="beetle-after-fire.jpg" alt="Beetle After Fire" width="800x" >}} Aftermath of the incident ALT TEXT {{< /resize-img >}} | 800x | |
+| {{< resize-img src="beetle-after-fire.jpg" alt="Beetle After Fire" width="80x" >}} Aftermath of the incident ALT TEXT {{< /resize-img >}} | 80x | |
+| {{< resize-img src="beetle-after-fire.jpg" alt="Beetle After Fire" width="80%" >}} Aftermath of the incident ALT TEXT {{< /resize-img >}} | 80% | |
+| {{< resize-img src="beetle-after-fire.jpg" alt="Beetle After Fire" width="8%" >}} Aftermath of the incident ALT TEXT {{< /resize-img >}} | 8% | |
+| fake img | fake alt | notes |
+
+
 
 It was supposed to be another ordinary day in the shop, but things took an unexpected turn. As I was working on the Beetle, I noticed a strange smell in the air—something burning. A quick investigation revealed an electrical fire had started near the car. The culprit? An old ceiling fan that was poorly wired and connected to the same circuit as the car’s nearby workspace.
 

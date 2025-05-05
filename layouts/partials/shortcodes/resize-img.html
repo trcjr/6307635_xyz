@@ -1,0 +1,19 @@
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "image" }}
+{{ $width := .Get "width" | default "800x" }}
+{{ $resizePattern := `^\d+x?$|^x\d+$` }}
+
+{{ with .Page.Resources.GetMatch $src }}
+  {{ $resized := . }}
+  {{ if findRE $resizePattern $width }}
+    {{ $resized = .Resize $width }}
+  {{ end }}
+  <figure>
+    <img src="{{ $resized.RelPermalink }}" alt="{{ $alt }}">
+    {{ with $.Inner }}
+      <figcaption>{{ . }}</figcaption>
+    {{ end }}
+  </figure>
+{{ else }}
+  <p><strong>Image '{{ $src }}' not found in page resources.</strong></p>
+{{ end }}

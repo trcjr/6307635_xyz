@@ -1,0 +1,19 @@
+{{ if .IsPage }}
+{{ $schema := dict
+  "@context" "https://schema.org"
+  "@type" "BlogPosting"
+  "headline" .Title
+  "datePublished" (.Date.Format "2006-01-02")
+  "author" (dict "@type" "Person" "name" (.Site.Author.name | default "Anonymous"))
+}}
+
+{{ $json := $schema | jsonify }}
+
+<!-- DEBUG: echo JSON to Hugo log -->
+{{ warnf "schema_json for page %q: |%s|" .RelPermalink $json }}
+
+<!-- Safe output -->
+<script type="application/ld+json">
+{{- $json | safeHTML -}}
+</script>
+{{ end }}
