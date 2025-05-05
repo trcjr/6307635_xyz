@@ -16,6 +16,9 @@ params:
   description: "Period-correct paint. Period-incorrect everything else."
   mainSections: ["posts", "about"]
   showFeaturedPost: true
+  copyrightText: "Theodore Robert Campbell Jr"
+  copyrightLink: "https://stupidfoot.com"
+
 
 menu:
   main:
