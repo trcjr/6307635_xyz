@@ -19,6 +19,16 @@ Since then, the Beetle has undergone some thoughtful upgrades, including:
 
 It’s been the start of a long-term restomod project — equal parts mechanical, personal, and nostalgic.
 
+## Original Car Information
+
+Here are the original details from the Volkswagen factory:
+
+- **VIN**: 6 307 635
+- **Model**: Type 113 – Export Model (left hand drive)
+- **Outside color (ex works)**: Sea-blue
+- **Production date**: April 24, 1964
+- **Delivery date**: April 28, 1964, to the USA
+
 ## Get in Touch
 
 If you have any questions, feedback, or just want to talk about the project, feel free to reach out!
