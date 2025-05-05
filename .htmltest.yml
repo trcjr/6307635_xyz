@@ -1,0 +1,4 @@
+DirectoryPath: ./public
+CheckExternal: true
+IgnoreURLs:
+  - https://localhost
