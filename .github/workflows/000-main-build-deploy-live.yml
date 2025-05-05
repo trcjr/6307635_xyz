@@ -14,10 +14,25 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v3
 
+      - name: Checkout submodules
+        run: git submodule update --init --recursive
+
+      - name: Show Git commit info
+        run: |
+          echo "Commit SHA: ${{ github.sha }}"
+          git log -1
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "latest"
+          hugo-version: "0.147.1"
+          extended: true
+
+      - name: Show Hugo version and environment
+        run: |
+          hugo version
+          echo "Environment variables:"
+          env | sort
 
       - name: Build Hugo site
         run: |
@@ -27,6 +42,65 @@ jobs:
       - name: Set CNAME file
         run: echo "6307635.xyz" > public/CNAME
 
+      - name: Check Hugo config presence
+        run: |
+          echo "Looking for config.{toml,yaml,json}:"
+          ls -l config.* || echo "No config file found"
+          echo "Preview of config:"
+          head -n 20 config.* || echo "No readable config"
+
+      - name: Debug available themes
+        run: |
+          echo "Listing contents of themes directory:"
+          ls -lah themes || echo "themes directory not found"
+          echo "Full theme file structure:"
+          find themes || echo "nothing found under themes"
+
+      - name: Debug Hugo Modules
+        run: |
+          echo "Running hugo mod graph (if using modules)..."
+          hugo mod graph || echo "Not using Hugo Modules or command failed"
+
+      - name: Check theme folder mounts
+        run: |
+          echo "Checking mounted theme folder (themes/PaperMod)..."
+          ls -lah themes/PaperMod || echo "themes/PaperMod not found"
+
+      - name: Install exiftool
+        run: sudo apt-get update && sudo apt-get install -y libimage-exiftool-perl
+
+      - name: Run EXIF metadata check
+        run: |
+          bash scripts/check-exif.sh --strip
+          if [ $? -ne 0 ]; then
+            echo "EXIF metadata was found and has been stripped."
+          fi
+
+      - name: Debug public directory contents
+        run: |
+          echo "Checking if public/ exists:"
+          if [ -d "./public" ]; then
+            echo "public/ directory exists"
+          else
+            echo "ERROR: public/ directory is missing!"
+            exit 1
+          fi
+
+          echo "Contents of public/ directory:"
+          ls -lah ./public
+
+          echo "Full file list (recursive):"
+          find ./public
+
+          echo "Total files:"
+          find ./public -type f | wc -l
+
+          echo "Disk usage:"
+          du -sh ./public
+
+      - name: Display .gitignore (if exists)
+        run: cat .gitignore || echo ".gitignore not found"
+
       - name: Output live URL
         run: |
           echo "🔗 Your site is live at: https://6307635.xyz/"
@@ -34,10 +108,11 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.GH_PAGES_DEPLOY_KEY }}
+          personal_token: ${{ secrets.GH_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
           force_orphan: true
           user_name: "GitHub Actions"
           user_email: "actions@github.com"
           commit_message: "Deploy from main: ${{ github.sha }}"
+          destination_dir: .
