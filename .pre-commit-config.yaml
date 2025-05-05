@@ -1,0 +1,24 @@
+# .pre-commit-config.yaml
+repos:
+  - repo: local
+    hooks:
+      - id: strip-exif
+        name: Strip EXIF metadata from images
+        entry: bash scripts/check-exif.sh --strip
+        language: system
+        types: [image]
+        files: \.(jpg|jpeg|png)$
+
+      - id: check-metadata
+        name: Validate Markdown metadata
+        entry: bash scripts/check-metadata.sh
+        language: system
+        types: [text]
+        files: \.md$
+
+      - id: check-slugs-unique
+        name: Check slugs for uniqueness
+        entry: bash scripts/check-slugs-unique.sh
+        language: system
+        types: [text]
+        files: \.md$
