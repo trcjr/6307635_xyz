@@ -16,4 +16,11 @@ Since then, the Beetle has undergone some thoughtful upgrades, including:
 - A 4" narrowed, adjustable front beam from Airkewld
 - A front disc brake conversion
 
+
 It’s been the start of a long-term restomod project — equal parts mechanical, personal, and nostalgic.
+
+## Get in Touch
+
+If you have any questions, feedback, or just want to talk about the project, feel free to reach out!
+
+You can contact us at: [contact@6307635.xyz](mailto:contact@6307635.xyz)
