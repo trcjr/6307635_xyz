@@ -20,6 +20,10 @@ params:
   copyrightLink: "https://stupidfoot.com"
 
 
+services:
+  googleAnalytics:
+    id: G-DCE0JMJ1G2
+
 menu:
   main:
     - identifier: posts
